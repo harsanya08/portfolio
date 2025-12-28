@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsanya Arul | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="portfolio-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="profile-side">
+        <div class="profile-content">
+
+            <div class="image-holder">
+                <img src="images/profile.jpg" alt="Profile Photo">
+            </div>
+
+            <h1>HARSANYA ARUL</h1>
+            <p class="tagline">ECE Student</p>
+
+            <div class="contact-quick-links">
+                <a href="https://mail.google.com/mail/?view=cm&to=harsanya2108@gmail.com"
+                   target="_blank" title="Email me">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/harsanya-arul-/"
+                   target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/harsanya08"
+                   target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <!-- Resume Button -->
+            <a href="assets/Harsanya_Arul_Resume.pdf"
+               class="resume-btn"
+               target="_blank"
+               download>
+               <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+
+            <div class="navigation-arrows">
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="content-side">
+        <div class="slider" id="mainSlider">
+
+            <!-- ABOUT -->
+            <section class="slide">
+                <span class="step-label">01 // Summary</span>
+                <h2>About Me</h2>
+                <p class="description">
+                    Pre-final year Electronics and Communication Engineering student with interests in Embedded Systems, IoT, and Programming (C, Java, Python), focused on learning, building, and applying engineering concepts to practical problems.
+                </p>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="slide">
+                <span class="step-label">02 // Projects</span>
+                <h2>Featured Work</h2>
+
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <div class="card-number">01</div>
+                        <h3>SYMPTOCARE</h3>
+                        <p>
+                            AI-powered healthcare assistant that converts patient symptoms into diagnosis insights and care guidance.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>ML</span>
+                            <span>Web</span>
+                        </div>
+                        <button class="view-btn" onclick="openModal('symptocare')">
+                            View Details
+                        </button>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-number">02</div>
+                        <h3>CLIMASENSE</h3>
+                        <p>
+                            IoT-based environmental monitoring system for real-time climate data and smart decision-making.
+                        </p>
+                        <div class="tech-tags">
+                            <span>ESP32</span>
+                            <span>Sensors</span>
+                            <span>Blynk</span>
+                        </div>
+                        <button class="view-btn" onclick="openModal('climasense')">
+                            View Details
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- INTERNSHIPS -->
+            <section class="slide">
+                <span class="step-label">03 // Internship</span>
+                <h2>Internship Experience</h2>
+
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <div class="card-number">01</div>
+                        <h3>Embedded Systems</h3>
+                        <p class="intern-company">Imbed Solutions</p>
+                        <p class="intern-duration">Jan 2025 – Feb 2025</p>
+                        <p class="intern-desc">
+                            Worked on IoT-enabled embedded systems with sensor integration, Blynk dashboards, and real-time monitoring applications.
+                        </p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-number">02</div>
+                        <h3>Embedded Systems & IoT</h3>
+                        <p class="intern-company">Azhizen Solutions</p>
+                        <p class="intern-duration">Jun 2025 – Jul 2025</p>
+                        <p class="intern-desc">
+                            Developed ESP32-based systems, PCB design validation using Proteus, and FreeRTOS-based multitasking firmware.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="slide">
+                <span class="step-label">04 // Contact</span>
+                <h2>Let's Connect</h2>
+
+                <div class="contact-info-text">
+                    <p><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu</p>
+                    <p><i class="fa-solid fa-phone"></i> 8148107553</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+</div>
+
+<!-- ================= PROJECT MODAL ================= -->
+<div class="modal" id="projectModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+
+<!-- ================= SLIDER SCRIPT ================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('mainSlider');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    let index = 0;
+    const total = document.querySelectorAll('.slide').length;
+
+    function move() {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        index = (index < total - 1) ? index + 1 : 0;
+        move();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        index = (index > 0) ? index - 1 : total - 1;
+        move();
+    });
+});
+</script>
+
+<!-- ================= MODAL SCRIPT ================= -->
+<script>
+function openModal(project) {
+    const title = document.getElementById("modalTitle");
+    const desc = document.getElementById("modalDesc");
+
+    if (project === "symptocare") {
+        title.innerText = "SYMPTOCARE – AI Healthcare Assistant";
+
+        desc.innerHTML = `
+            <strong>Problem Statement</strong><br>
+            Limited access to immediate medical guidance often leads to delayed diagnosis and poor decision-making, especially in remote or emergency situations.
+            <br><br>
+
+            <strong>Tech Stack</strong><br>
+            Python, Machine Learning (Scikit-learn / TensorFlow), Web Technologies, Health Sensors (Temperature, Pulse, SpO₂)
+            <br><br>
+
+            <strong>What Was Done</strong><br>
+            Developed an AI-based system to analyze patient symptoms using machine learning models, optimized for fast predictions, and integrated care recommendations, emergency alerts, and specialist guidance through a web interface.
+            <br><br>
+
+            <strong>Outcome / Impact</strong><br>
+            Achieved ~85% diagnostic accuracy with response time under 3 seconds, enabling faster and more informed healthcare decisions.
+        `;
+    }
+
+    if (project === "climasense") {
+        title.innerText = "CLIMASENSE – IoT Environmental Monitoring";
+
+        desc.innerHTML = `
+            <strong>Problem Statement</strong><br>
+            Environmental and industrial monitoring often requires reliable long-range communication and continuous data collection from multiple locations. Traditional short-range systems fail to provide stable coverage over large areas.
+            <br><br>
+
+            <strong>Tech Stack</strong><br>
+            ESP32, LoRa SX1278, Blynk IoT, DHT11, SHT20, MQ Series Sensors
+            <br><br>
+
+            <strong>What Was Done</strong><br>
+            Designed a distributed IoT monitoring system consisting of multiple sensor nodes communicating over LoRa. Integrated environmental sensors for temperature, humidity, and gas detection, and visualized real-time data through a cloud dashboard. Optimized communication and node configuration for long-range and reliable transmission.
+            <br><br>
+
+            <strong>Outcome / Impact</strong><br>
+            Successfully achieved stable LoRa communication over 8 km with 5 sensor nodes, enabling reliable real-time environmental monitoring across large areas.
+        `;
+    }
+
+    document.getElementById("projectModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+}
+</script>
+
+</script>
+
+<!-- ================= EMAILJS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function() {
+    emailjs.init("lxr8FRk113jG58dbv");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_6rn64zh",
+        "template_qzdd8k6",
+        this,
+        "lxr8FRk113jG58dbv"
+    ).then(
+        function() {
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        },
+        function(error) {
+            alert("Failed to send message. Check console.");
+            console.log(error);
+        }
+    );
+});
+</script>
+
+</body>
+</html>
