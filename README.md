@@ -4,10 +4,11 @@
 https://harsanya08.github.io/portfolio/
 
 ## About
-Pre-final year Electronics and Communication Engineering student with interests in Embedded Systems, IoT, and Programming (C, Java, Python).
+Aspiring Software Engineer skilled in Java and problem-solving, with hands-on experience in building real-world applications. Passionate about backend development and learning new technologies
+                </p>
 
 ## Highlights
-- Embedded Systems & IoT Projects
+- Projects
 - Internship Experience
 - Resume Download
 - Contact Form Integration (EmailJS)
