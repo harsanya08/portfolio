@@ -48,7 +48,7 @@
             </div>
 
             <!-- Resume Button -->
-            <a href="assets/Harsanya_Arul_Resume.pdf"
+            <a href="assets\Harsanya_Original_it.pdf"
                class="resume-btn"
                target="_blank"
                download>
@@ -76,7 +76,7 @@
                 <span class="step-label">01 // Summary</span>
                 <h2>About Me</h2>
                 <p class="description">
-                    Pre-final year Electronics and Communication Engineering student with interests in Embedded Systems, IoT, and Programming (C, Java, Python), focused on learning, building, and applying engineering concepts to practical problems.
+                    Aspiring Software Engineer skilled in Java and problem-solving, with hands-on experience in building real-world applications. Passionate about backend development and learning new technologies
                 </p>
             </section>
 
@@ -105,16 +105,16 @@
 
                     <div class="project-card">
                         <div class="card-number">02</div>
-                        <h3>CLIMASENSE</h3>
+                        <h3>AUTHGUARD</h3>
                         <p>
-                            IoT-based environmental monitoring system for real-time climate data and smart decision-making.
+                            A secure authentication service using Spring Boot with BCrypt password hashing and JWT-based stateless login
                         </p>
                         <div class="tech-tags">
-                            <span>ESP32</span>
-                            <span>Sensors</span>
-                            <span>Blynk</span>
+                            <span> Java</span>
+                            <span>Spring Boot</span>
+                            <span>JPA</span>
                         </div>
-                        <button class="view-btn" onclick="openModal('climasense')">
+                        <button class="view-btn" onclick="openModal('AUTHGUARD')">
                             View Details
                         </button>
                     </div>
@@ -135,7 +135,7 @@
                         <p class="intern-company">Imbed Solutions</p>
                         <p class="intern-duration">Jan 2025 – Feb 2025</p>
                         <p class="intern-desc">
-                            Worked on IoT-enabled embedded systems with sensor integration, Blynk dashboards, and real-time monitoring applications.
+                           Worked on IoT-based applications involving sensor data processing, real-time monitoring, and dashboard visualization using platforms like Blynk.
                         </p>
                     </div>
 
@@ -145,7 +145,7 @@
                         <p class="intern-company">Azhizen Solutions</p>
                         <p class="intern-duration">Jun 2025 – Jul 2025</p>
                         <p class="intern-desc">
-                            Developed ESP32-based systems, PCB design validation using Proteus, and FreeRTOS-based multitasking firmware.
+                           Built real-time embedded applications using ESP32 with multitasking concepts and system-level validation for improved performance and reliability.
                         </p>
                     </div>
 
@@ -210,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <!-- ================= MODAL SCRIPT ================= -->
+<!-- ================= MODAL SCRIPT ================= -->
 <script>
 function openModal(project) {
     const title = document.getElementById("modalTitle");
@@ -236,24 +237,24 @@ function openModal(project) {
         `;
     }
 
-    if (project === "climasense") {
-        title.innerText = "CLIMASENSE – IoT Environmental Monitoring";
+    else if (project === "AUTHGUARD") {
+        title.innerText = "AUTHGUARD – Secure Authentication System";
 
         desc.innerHTML = `
             <strong>Problem Statement</strong><br>
-            Environmental and industrial monitoring often requires reliable long-range communication and continuous data collection from multiple locations. Traditional short-range systems fail to provide stable coverage over large areas.
+            Web applications need secure and scalable authentication systems, as traditional approaches are prone to security risks and inefficiencies.
             <br><br>
 
             <strong>Tech Stack</strong><br>
-            ESP32, LoRa SX1278, Blynk IoT, DHT11, SHT20, MQ Series Sensors
+            Java, Spring Boot, Spring Security, JWT, BCrypt, JPA, H2, Git, Maven
             <br><br>
 
             <strong>What Was Done</strong><br>
-            Designed a distributed IoT monitoring system consisting of multiple sensor nodes communicating over LoRa. Integrated environmental sensors for temperature, humidity, and gas detection, and visualized real-time data through a cloud dashboard. Optimized communication and node configuration for long-range and reliable transmission.
+            Developed a secure authentication service using Spring Boot with BCrypt password hashing and JWT-based stateless login
             <br><br>
 
             <strong>Outcome / Impact</strong><br>
-            Successfully achieved stable LoRa communication over 8 km with 5 sensor nodes, enabling reliable real-time environmental monitoring across large areas.
+            Successfully implemented a secure JWT-based authentication system with stateless login and encrypted password handling, ensuring robust and scalable user access control.
         `;
     }
 
@@ -264,6 +265,8 @@ function closeModal() {
     document.getElementById("projectModal").style.display = "none";
 }
 </script>
+
+
 
 </script>
 
